@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -68,7 +67,7 @@ class _MyTextFieldState extends State<MyTextField> {
               obscureText: false,
               maxLines: 1,
               maxLength: 50,
-              maxLengthEnforcement: MaxLengthEnforcement.enforced,
+              // maxLengthEnforcement: MaxLengthEnforcement.enforced,
               enabled: true,
               cursorColor: Colors.red,
               cursorWidth: 2.0,

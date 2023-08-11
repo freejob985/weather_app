@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/services/weather_service.dart';
 
 class SearchPage extends StatelessWidget {
-  const SearchPage({Key? key}) : super(key: key);
+  // const SearchPage({Key? key}) : super(key: key);
+  String? citrange;
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +13,11 @@ class SearchPage extends StatelessWidget {
       ),
       body: Center(
         child: TextField(
+          onSubmitted: (value) {
+            citrange = value;
+            WeatherService service = WeatherService();
+            service.getWeather(cityName: citrange!);
+          },
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(horizontal: 16),
             labelText: 'Label Text',
