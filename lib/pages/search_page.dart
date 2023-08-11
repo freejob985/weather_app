@@ -9,7 +9,18 @@ class SearchPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Search a City'),
       ),
-      body: Container(),
+      body: Center(
+        child: TextField(
+          decoration: InputDecoration(
+            contentPadding: EdgeInsets.symmetric(horizontal: 16),
+            labelText: 'Label Text',
+            prefixIcon: Icon(Icons.search),
+            suffixIcon: Icon(Icons.search),
+            border: OutlineInputBorder(),
+            hintText: 'Search Page',
+          ),
+        ),
+      ),
     );
   }
 }
